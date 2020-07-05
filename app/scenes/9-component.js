@@ -17,7 +17,7 @@ function Menu({ children, isStatic, isClosed, setClosed }) {
         leaveTo="-ml-64"
       >
         <aside
-          className={`z-20 bg-white w-64 min-h-screen flex flex-col ${
+          className={`z-20 bg-white w-64 min-h-screen flex flex-col -ml-64 ${
             isStatic ? '' : 'fixed'
           }`}
         >
@@ -27,7 +27,7 @@ function Menu({ children, isStatic, isClosed, setClosed }) {
 
               {!isStatic && (
                 <button
-                  key="Close Menu"
+                  autoFocus
                   className="w-10 p-1"
                   aria-label="Close menu"
                   title="Close menu"

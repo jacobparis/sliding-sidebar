@@ -19,7 +19,7 @@ export default function HomeScene() {
         leaveTo="-ml-64"
       >
         <aside
-          className={`z-20 bg-white w-64 min-h-screen flex flex-col ${
+          className={`z-20 bg-white w-64 min-h-screen flex flex-col -ml-64 ${
             isStatic ? '' : 'fixed'
           }`}
         >
@@ -28,6 +28,7 @@ export default function HomeScene() {
 
             {!isStatic && (
               <button
+                autoFocus
                 key="Close Menu"
                 className="w-10 p-1"
                 aria-label="Close menu"
@@ -82,7 +83,7 @@ export default function HomeScene() {
         leaveFrom="opacity-50"
         leaveTo="opacity-0"
       >
-        <div className="fixed inset-0 bg-black" />
+        <div className="fixed inset-0 bg-black opacity-0" />
       </Transition>
 
       <main className="flex-grow flex flex-col min-h-screen">
