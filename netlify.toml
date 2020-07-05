@@ -15,3 +15,10 @@
     [headers.values]
     Access-Control-Allow-Origin = "*"
     Access-Control-Allow-Headers = "Content-Type"
+
+
+[dev]
+  framework = "#custom"
+  command = "npm run serve:webpack"
+  targetPort = 8080
+  autoLaunch = true

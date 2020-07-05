@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx webpack",
-    "serve": "netlify dev --functions functions"
+    "serve": "netlify dev --functions functions",
+    "serve:webpack": "npx webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -24,25 +25,39 @@
     "@babel/preset-env": "^7.10.1",
     "@babel/preset-react": "^7.10.1",
     "@babel/runtime-corejs3": "^7.9.6",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.3.3",
+    "@tailwindcss/custom-forms": "^0.2.1",
+    "autoprefixer": "^9.8.4",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
+    "command-line-args": "^5.1.1",
     "core-js": "^3.6.5",
     "css-loader": "^3.5.3",
     "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.0",
-    "eslint-plugin-react-hooks": "^4.0.4",
+    "eslint-plugin-react-hooks": "^4.0.5",
     "html-webpack-plugin": "^4.3.0",
     "mini-css-extract-plugin": "^0.9.0",
     "netlify-cli": "^2.54.0",
     "node-sass": "^4.14.1",
+    "prettier": "^2.0.5",
+    "react-refresh": "^0.8.3",
     "sass-loader": "^8.0.2",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "@xstate/react": "^0.8.1",
+    "postcss-loader": "^3.0.0",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-responsive": "^8.1.0",
+    "react-transition-group": "^4.4.1",
+    "tailwindcss": "^1.4.6",
     "xstate": "^4.10.0"
   }
 }

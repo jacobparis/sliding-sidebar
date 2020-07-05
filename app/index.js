@@ -1,17 +1,15 @@
-import "./index.scss"
+import './index.css'
 
-import "core-js/stable"
-import "regenerator-runtime/runtime"
+import 'core-js/stable'
+import 'regenerator-runtime/runtime'
 
-import * as React from "react"
-import ReactDOM from "react-dom"
+import * as React from 'react'
+import ReactDOM from 'react-dom'
 
-import HomeScene from "./scenes/home"
+import HomeScene from './scenes/home'
 
 function App() {
-    return (
-        <HomeScene />
-    )
+  return <HomeScene />
 }
 
-ReactDOM.render(<App />, document.getElementById("root"))
+ReactDOM.render(<App />, document.getElementById('root'))

@@ -1,16 +1,20 @@
-import * as React from "react"
+import * as React from 'react'
 
-import { useMachine } from '@xstate/react'
-import { AppMachine } from '../machines/AppMachine'
+import Menu from '../components/Menu'
+
+import useBreakpoint from '../hooks/useBreakpoint'
 
 export default function HomeScene() {
-    const [state, send] = useMachine(AppMachine.withContext({
-        lenders: []
-    }), {
-        devTools: true
-    })
+  const [isClosed, setClosed] = React.useState(true)
 
-    return (
-        <h1> Home Scene </h1>
-    )
+  const isStatic = useBreakpoint('sm')
+
+  return (
+    <Menu isStatic={isStatic} isClosed={isClosed} setClosed={setClosed}>
+      <div className="flex flex-grow items-center justify-between px-3">
+        <h1 className="text-lg">Home</h1>
+        <button className="text-blue-700 underline">Log in</button>
+      </div>
+    </Menu>
+  )
 }
